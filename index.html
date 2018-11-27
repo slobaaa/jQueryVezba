@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zadatak 2 Jquery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<section id="tabela"></section>
+	<div class="container">
+		<!--TABELA -->
+		<div class="row">
+			<table class="table table-bordered table-md table-hover">
+			    <thead>
+			      <tr>
+			        <th>Ime</th>
+			        <th>Prezime</th>
+			        <th>E-mail</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td class="tabelaIme" for="ime">Milan</td>
+			        <td class="tabelaPrezime" for="prezime">Milanovic</td>
+			        <td class="tabelaEmail" for="email">lorem.ipsum@aaa.com</td>
+			        <td class="text-right"><i class="material-icons brisi" style="font-size:36px; cursor: pointer;">highlight_off</i></td>
+			      </tr>
+			      <tr>
+			        <td class="tabelaIme" for="ime">Spaso</td>
+			        <td class="tabelaPrezime" for="prezime">Spasojevic</td>
+			        <td class="tabelaEmail" for="email">dolor@ebbb.com</td>
+			        <td class="text-right"><i class="material-icons brisi" style="font-size:36px; cursor: pointer;">highlight_off</i></td>
+			      </tr>
+			      <tr>
+			        <td class="tabelaIme" for="ime">Jovana</td>
+			        <td class="tabelaPrezime" for="prezime">Lukic</td>
+			        <td class="tabelaEmail" for="email">jovana@ccc.com</td>
+			        <td class="text-right"><i class="material-icons brisi" style="font-size:36px; cursor: pointer;">highlight_off</i></td>
+			      </tr>
+			    </tbody>
+		  </table>
+		</div>
+		<!--KRAJ TABELA -->
+
+		<!--FORMA ZA JEZICAK DODAVANJE I PRETRAGA-->
+		<div class="row">
+			<div class="col-md-6 text-left">
+					<button type="button" class="btn btn-secondary" onclick="otvoriJezicakZaposlenog()">Dodaj novog zaposlenog</button>
+					<br><br>
+					<a href="#pretraga" class="btn btn-secondary" data-toggle="collapse">Pretraga</a>
+					  <div id="pretraga" class="collapse">
+					    <div class="form-group">
+							<input type="text" class="form-control my-2" id="txtPretraga" name="pretraga" autofocus>
+				    	</div>
+					  </div>
+			</div>
+
+			<!--FORMA ZA DODAVANJE NOVOG ZAPOSLENOG-->
+			<div id="formaDodatiNovogZaposlenog" class="col-md-6">
+				<form action="#">
+				    <div class="form-group">
+						<label for="txtIme">Ime</label>
+						<input type="text" class="form-control" id="txtIme" name="username" required autofocus>
+				    </div>
+				    <div class="form-group">
+						<label for="txtPrezime">Prezime</label>
+						<input type="text" class="form-control" id="txtPrezime" name="username" required>
+				    </div>
+				    <div class="form-group">
+						<label for="txtEmail">E-mail</label>
+						<input type="email" class="form-control" id="txtEmail" name="username" required>
+				    </div>
+				    <button type="submit" class="btn btn-secondary">Zavrsi</button>
+				</form>
+			</div>
+		</div>
+		<!--KRAJ FORMA ZA DODAVANJE NOVOG ZAPOSLENOH -->
+	</div>
+<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
